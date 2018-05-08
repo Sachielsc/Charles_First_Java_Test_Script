@@ -1,7 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class main {
+public class page {
 
     public static void main(String[] args) {
         // this is how I set a relative path in Java
