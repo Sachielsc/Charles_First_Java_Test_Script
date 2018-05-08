@@ -4,8 +4,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class main {
 
     public static void main(String[] args) {
+        // this is how I set a relative path in Java
+        String localDir = System.getProperty("user.dir") + "\\src\\main\\resources\\chromedriver_win32\\chromedriver.exe";
+
         // declaration and instantiation of objects/variables
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\repos\\maven demo\\src\\main\\resources\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",localDir);
 
         WebDriver driver = new ChromeDriver();
 
