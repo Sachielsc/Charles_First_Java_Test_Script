@@ -33,7 +33,7 @@ public class page {
         }
 
         //close Fire fox
-        driver.close();
+        driver.quit();
     }
 
 }
