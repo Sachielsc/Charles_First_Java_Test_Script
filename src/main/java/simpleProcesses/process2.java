@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class page2 {
+public class process2 {
     public static void main(String[] args) {
 
         // this is how I set a relative path in Java
@@ -20,7 +20,7 @@ public class page2 {
 
         driver.get(baseUrl);
         tagName = driver.findElement(By.id("email")).getTagName();
-        System.out.println(tagName);
+        System.out.println("The tag name is: " + tagName);
         driver.quit();
         System.exit(0);
     }
