@@ -7,6 +7,8 @@ import org.junit.runner.notification.Failure;
 public class TestRunner {
 
     public static void main(String[] args) {
+        //TODO: this TestRunner is not working currently since there is no runnable method in CalculatorTest.java
+
         //This result object has many methods and it is very useful
         //Type result and press dot, all the methods will display
         //This statement is to load all type of results in the result object
