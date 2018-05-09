@@ -25,7 +25,7 @@ public class Driver {
             chromeOptions.addArguments("--disable-infobars");
             chromeOptions.setHeadless(false);
             webDriver = new ChromeDriver(chromeOptions);
-            webDriver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+            // webDriver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
             webDriver.manage().window().maximize();
         }
 
