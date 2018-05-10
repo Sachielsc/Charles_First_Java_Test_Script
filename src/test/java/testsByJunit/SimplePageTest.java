@@ -49,6 +49,7 @@ public class SimplePageTest {
         driver.get(baseUrl);
         PageFactory.initElements(driver, this);
 
+        // TODO: extentreporter not working yet
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(htmlFilePath);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
