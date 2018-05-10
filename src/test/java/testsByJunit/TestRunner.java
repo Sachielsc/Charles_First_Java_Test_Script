@@ -1,4 +1,4 @@
-package testsForJunit;
+package testsByJunit;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -12,7 +12,7 @@ public class TestRunner {
         //This result object has many methods and it is very useful
         //Type result and press dot, all the methods will display
         //This statement is to load all type of results in the result object
-        Result result = JUnitCore.runClasses(testsForJunit.CalculatorTest.class);
+        Result result = JUnitCore.runClasses(testsByJunit.CalculatorTest.class);
         //Here it is getting the run count from the result object
         System.out.println("Total number of tests " + result.getRunCount());
         //This is to get the failure count from the result object
