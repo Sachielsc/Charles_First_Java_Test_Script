@@ -18,6 +18,7 @@ public class SimplePageTest {
     WebDriver driver;
     WebDriverWait wait;
     private String baseUrl = "https://alphav3.vaultintel.com/index/hostLogin";
+    private String eventsURL = "https://alphav3.vaultintel.com/incidentManagement/incidentRegisters/index";
     private String userName = "plan.6";
     private String passWord = "plan01#";
 
@@ -28,6 +29,10 @@ public class SimplePageTest {
     WebElement passWordField;
     @FindBy(css = "button#login-submit")
     WebElement loginButton;
+    @FindBy(css = "#left-panel > span > i")
+    WebElement expandArrow;
+    @FindBy(partialLinkText = "Actions")
+    WebElement firstActionsButton;
 
     // Step definitions
     public void Init()
@@ -50,13 +55,25 @@ public class SimplePageTest {
         // log in
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         loginButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(expandArrow));
+    }
+
+    public void GoToEventsPage(){
+        driver.get(eventsURL);
+        wait.until(ExpectedConditions.elementToBeClickable(firstActionsButton));
+    }
+
+    public void CleanUp(){
+        Driver.quitWebDriver();
     }
 
     @Test
-    @DisplayName("Navigate to Vault & type in credentials (All in one)")
-    void NavigateAndCredentials () {
+    @DisplayName("My first JUnit test case (All in one)")
+    void TestCase1() {
         Init();
         LogIn();
+        GoToEventsPage();
+        CleanUp();
     }
 }
 

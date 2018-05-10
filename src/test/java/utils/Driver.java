@@ -34,7 +34,6 @@ public class Driver {
 
     public static void quitWebDriver() {
         if (!hasQuit(webDriver)){
-            // webDriver.close();
             webDriver.quit();
         }
     }
