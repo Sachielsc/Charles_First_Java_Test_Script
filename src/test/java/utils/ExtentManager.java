@@ -10,7 +10,7 @@ import java.util.Date;
 public class ExtentManager {
 
     private static ExtentReports extent;
-    private static ExtentTest test;
+    public static ExtentTest test;
     private static ExtentHtmlReporter htmlReporter;
     private static String filePath = System.getProperty("user.dir") + "/Extent/extentreport.html";
 
@@ -20,8 +20,7 @@ public class ExtentManager {
         }//avoid creating new instance of html file
         extent = new ExtentReports();
         extent.attachReporter(getHtmlReporter());
-        extent.setSystemInfo("Author","Charles");
-        extent.setSystemInfo("OS","Windows");
+        extent.setSystemInfo("Tester","Charles");
         extent.setSystemInfo("Browser","Google Chrome");
         extent.setSystemInfo("Date/Time", new Date().toString());
         return extent;
@@ -35,7 +34,6 @@ public class ExtentManager {
         htmlReporter.config().setDocumentTitle("Set document title here");
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setReportName("Set report name here");
-
         return htmlReporter;
     }
 

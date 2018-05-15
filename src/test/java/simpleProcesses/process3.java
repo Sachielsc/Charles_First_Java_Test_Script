@@ -9,7 +9,7 @@ public class process3 {
     public static void main(String[] args) {
         WebDriver driver;
         String baseUrl = "http://www.facebook.com";
-        String tagName = "";
+        String tagName;
 
         driver = Driver.getWebDriver();
         driver.get(baseUrl);

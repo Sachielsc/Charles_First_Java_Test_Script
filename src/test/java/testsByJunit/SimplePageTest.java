@@ -1,6 +1,5 @@
 package testsByJunit;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -11,10 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.PageFactory;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+import static utils.ExtentManager.test;
+import com.aventstack.extentreports.Status;
 import utils.ExtentManager;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class SimplePageTest {
 
@@ -25,9 +23,6 @@ public class SimplePageTest {
     private String eventsURL = "https://alphav3.vaultintel.com/incidentManagement/incidentRegisters/index";
     private String userName = "plan.6";
     private String passWord = "plan01#";
-    public static ExtentReports extent;
-    public static ExtentTest test;
-    private String htmlFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\extentReporter";
 
     // Web elements
     @FindBy(id = "user")
@@ -48,11 +43,7 @@ public class SimplePageTest {
         wait = new WebDriverWait(driver, 8);
         driver.get(baseUrl);
         PageFactory.initElements(driver, this);
-
-        // TODO: extentreporter not working yet
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(htmlFilePath);
-        extent = new ExtentReports();
-        extent.attachReporter(htmlReporter);
+        test = ExtentManager.GetExtent().createTest("SimplePageTest");
     }
 
     public void LogIn()
@@ -76,7 +67,7 @@ public class SimplePageTest {
     }
 
     public void CleanUp(){
-        extent.flush();
+        test.log(Status.PASS, "My first JUnit test case (All in one) passes");
         Driver.quitWebDriver();
     }
 
