@@ -1,4 +1,4 @@
-package testsByJunit;
+package testsByJunit5;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import classesForJunit.Calculator;

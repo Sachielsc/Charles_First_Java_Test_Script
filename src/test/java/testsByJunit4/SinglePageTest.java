@@ -1,19 +1,19 @@
-package testsByJunit;
+package testsByJunit4;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
+import com.aventstack.extentreports.Status;
+
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.PageFactory;
-import static utils.ExtentManager.test;
-import static utils.ExtentManager.extent;
-import com.aventstack.extentreports.Status;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.Driver;
 import utils.ExtentManager;
+
+import static utils.ExtentManager.extent;
+import static utils.ExtentManager.test;
 
 public class SinglePageTest {
 
@@ -38,7 +38,7 @@ public class SinglePageTest {
     WebElement firstActionsButton;
 
     // Step definitions
-    public void Init()
+    private void Init()
     {
         driver = Driver.getWebDriver();
         wait = new WebDriverWait(driver, 8);
@@ -48,7 +48,7 @@ public class SinglePageTest {
         test = extent.createTest("A simple test");
     }
 
-    public void LogIn()
+    private void LogIn()
     {
         // Type in credentials
         wait.until(ExpectedConditions.elementToBeClickable(userNameField));
@@ -63,19 +63,18 @@ public class SinglePageTest {
         wait.until(ExpectedConditions.elementToBeClickable(expandArrow));
     }
 
-    public void GoToEventsPage(){
+    private void GoToEventsPage(){
         driver.get(eventsURL);
         wait.until(ExpectedConditions.elementToBeClickable(firstActionsButton));
     }
 
-    public void CleanUp(){
+    private void CleanUp(){
         test.log(Status.PASS, "My simple JUnit test case passes! Hooray!");
         Driver.quitWebDriver();
         extent.flush();
     }
 
     @Test
-    @DisplayName("Charles' first JUnit test case (All in one)")
     public void TestCase1() {
         Init();
         LogIn();
