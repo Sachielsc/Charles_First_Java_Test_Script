@@ -15,7 +15,7 @@ import static utils.ExtentManager.extent;
 import com.aventstack.extentreports.Status;
 import utils.ExtentManager;
 
-public class SimplePageTest {
+public class SinglePageTest {
 
     // definitions
     WebDriver driver;
@@ -45,7 +45,7 @@ public class SimplePageTest {
         driver.get(baseUrl);
         PageFactory.initElements(driver, this);
         extent = ExtentManager.GetExtent();
-        test = extent.createTest("SimplePageTest");
+        test = extent.createTest("A simple test");
     }
 
     public void LogIn()
@@ -69,13 +69,13 @@ public class SimplePageTest {
     }
 
     public void CleanUp(){
-        test.log(Status.PASS, "My first JUnit test case (All in one) passes");
+        test.log(Status.PASS, "My simple JUnit test case passes! Hooray!");
         Driver.quitWebDriver();
         extent.flush();
     }
 
     @Test
-    @DisplayName("My first JUnit test case (All in one)")
+    @DisplayName("Charles' first JUnit test case (All in one)")
     void TestCase1() {
         Init();
         LogIn();
