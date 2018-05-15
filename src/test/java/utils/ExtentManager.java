@@ -9,7 +9,7 @@ import java.util.Date;
 
 public class ExtentManager {
 
-    private static ExtentReports extent;
+    public static ExtentReports extent;
     public static ExtentTest test;
     private static ExtentHtmlReporter htmlReporter;
     private static String filePath = System.getProperty("user.dir") + "/Extent/extentreport.html";

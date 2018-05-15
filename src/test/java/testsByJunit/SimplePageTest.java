@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.PageFactory;
 import static utils.ExtentManager.test;
+import static utils.ExtentManager.extent;
 import com.aventstack.extentreports.Status;
 import utils.ExtentManager;
 
@@ -43,7 +44,8 @@ public class SimplePageTest {
         wait = new WebDriverWait(driver, 8);
         driver.get(baseUrl);
         PageFactory.initElements(driver, this);
-        test = ExtentManager.GetExtent().createTest("SimplePageTest");
+        extent = ExtentManager.GetExtent();
+        test = extent.createTest("SimplePageTest");
     }
 
     public void LogIn()
@@ -69,6 +71,7 @@ public class SimplePageTest {
     public void CleanUp(){
         test.log(Status.PASS, "My first JUnit test case (All in one) passes");
         Driver.quitWebDriver();
+        extent.flush();
     }
 
     @Test
