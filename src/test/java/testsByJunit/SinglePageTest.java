@@ -76,7 +76,7 @@ public class SinglePageTest {
 
     @Test
     @DisplayName("Charles' first JUnit test case (All in one)")
-    void TestCase1() {
+    public void TestCase1() {
         Init();
         LogIn();
         GoToEventsPage();

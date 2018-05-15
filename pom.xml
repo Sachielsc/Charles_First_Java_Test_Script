@@ -31,7 +31,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- For the following three dependencies -->
+        <!-- JUnit 5 For the following three dependencies -->
         <!-- https://github.com/junit-team/junit5-samples/tree/r5.2.0/junit5-jupiter-starter-maven -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -54,7 +54,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <!-- extent reports -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
@@ -76,6 +76,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.21.0</version>
@@ -87,6 +88,7 @@
                     </dependency>
                 </dependencies>
             </plugin>
+
         </plugins>
     </build>
 

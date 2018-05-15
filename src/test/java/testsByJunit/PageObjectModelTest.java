@@ -24,7 +24,7 @@ public class PageObjectModelTest {
 
     @Test
     @DisplayName("My first POM / JUnit test case")
-    public void TestCase1() {
+    private void TestCase1() {
         // variable definitions
         String userName = "plan.6";
         String passWord = "plan01#";
