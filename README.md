@@ -13,5 +13,6 @@ Update the <groupId> and <artifactId> in "pom.xml" file, as incorrect value for 
 
 Click [here](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) to find more about POM.
 ## Other useful sites
+- Click [here](https://junit.org/junit5/docs/current/user-guide/) to find more about JUnit 5
 - Click [here](https://www.maketecheasier.com/vim-keyboard-shortcuts-cheatsheet/) to find more about Vim Keyboard Shortcuts Cheatsheet
 - Click [here](https://guides.github.com/features/mastering-markdown/) to find more about Markdown syntax
