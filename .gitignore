@@ -5,3 +5,4 @@ target
 *.iml
 **/Extent/*.html
 lib
+/bin/
