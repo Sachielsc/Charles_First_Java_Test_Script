@@ -12,3 +12,6 @@ I can use this script as a template for all my automation test script in Java.
 Update the <groupId> and <artifactId> in "pom.xml" file, as incorrect value for those XML elements will lead to failure.
 
 Click [here](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) to find more about POM.
+## Other useful sites
+- Click [here](https://www.maketecheasier.com/vim-keyboard-shortcuts-cheatsheet/) to find more about Vim Keyboard Shortcuts Cheatsheet
+- Click [here](https://guides.github.com/features/mastering-markdown/) to find more about Markdown syntax
