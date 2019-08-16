@@ -6,3 +6,9 @@ target
 **/Extent/*.html
 lib
 /bin/
+
+
+# eclipse files
+.classpath
+.project
+.settings/
