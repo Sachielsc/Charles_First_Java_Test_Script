@@ -1,15 +1,16 @@
-package testsByJunit4;
+package testsByJunit5;
 
-//The following is JUnit4
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+//The following is JUnit4 (obsolete)
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
 
-//The following is JUnit5 (Beta)
-// import org.junit.jupiter.api.BeforeEach;
-// import org.junit.jupiter.api.DisplayName;
-// import org.junit.jupiter.api.Test;
-
+//The following is JUnit5
+ import org.junit.jupiter.api.BeforeEach;
+ import org.junit.jupiter.api.DisplayName;
+ import org.junit.jupiter.api.Test;
+ import org.junit.jupiter.api.AfterEach;
+ 
 import org.openqa.selenium.WebDriver;
 import pageobjects.*;
 import utils.Driver;
@@ -18,7 +19,7 @@ public class PageObjectModelTest {
     // global variable definitions
     WebDriver driver;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         driver = Driver.getWebDriver();
     }
@@ -36,7 +37,7 @@ public class PageObjectModelTest {
         homePage.WaitUntilHomePageLoadingComplete();
     }
 
-    @After
+    @AfterEach
     public void tearDown(){
         Driver.quitWebDriver();
     }

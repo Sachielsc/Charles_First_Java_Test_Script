@@ -1,21 +1,41 @@
-package testsByJunit4;
+//package testsByJunit4;
+//
+//import com.aventstack.extentreports.Status;
+//
+//import org.junit.Test;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+//import utils.Driver;
+//import utils.ExtentManager;
+//
+//import static utils.ExtentManager.extent;
+//import static utils.ExtentManager.test;
 
-import com.aventstack.extentreports.Status;
 
-import org.junit.Test;
+
+
+package testsByJunit5;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.PageFactory;
+import static utils.ExtentManager.test;
+import static utils.ExtentManager.extent;
+import com.aventstack.extentreports.Status;
 import utils.ExtentManager;
 
-import static utils.ExtentManager.extent;
-import static utils.ExtentManager.test;
 
-public class SinglePageTest {
+public class SinglePageTest2 {
 
     // definitions
     WebDriver driver;
