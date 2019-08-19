@@ -19,7 +19,7 @@ public class SinglePageTest {
     // definitions
     WebDriver driver;
     WebDriverWait wait;
-    private String baseUrl = "https://alphav3.vaultintel.com/index/hostLogin";
+    private String baseUrl = "http://services.smartbear.com/samples/TestComplete14/smartstore/";
     private String eventsURL = "https://alphav3.vaultintel.com/incidentManagement/incidentRegisters/index";
     private String userName = "plan.6";
     private String passWord = "plan01#";
