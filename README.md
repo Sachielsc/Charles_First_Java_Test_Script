@@ -1,6 +1,7 @@
 # Charles' first Java script for testing
 ## Description
 This was one of my projects maintained while I was in Planit bootcamp training. Due to the very limited number in Planit Git, I have to move it here.
+
 I can use this script as a template for all my automation test script in Java.
 ## Before running
 ### Make sure Maven is correctly downloaded and configured before we run the scripts
