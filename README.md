@@ -11,7 +11,7 @@ I can use this script as a template for all my automation test script in Java.
   - Click [here](https://docs.microsoft.com/en-us/azure/devops/artifacts/maven/install?view=azure-devops) to find more details
 
 ### Important update notes on 2019/08/16
-Update the <groupId> and <artifactId> in "pom.xml" file, as incorrect value for those XML elements will lead to failure.
+Update the "groupId" and the "artifactId" in "pom.xml" file, as incorrect value for those XML elements will lead to failure.
 
 Click [here](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) to find more about POM.
 ## Other useful sites
