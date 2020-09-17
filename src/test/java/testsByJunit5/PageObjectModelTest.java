@@ -25,7 +25,8 @@ public class PageObjectModelTest {
     }
 
     @Test
-    public void TestCase1() {
+    @DisplayName("Test the java method \"runTestCase1\"")
+    public void runTestCase1() {
         // variable definitions
         String userName = "plan.6";
         String passWord = "plan01#";

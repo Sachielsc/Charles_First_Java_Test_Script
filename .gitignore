@@ -7,6 +7,8 @@ target
 lib
 /bin/
 
+# visual studio code
+.vscode
 
 # eclipse files
 .classpath

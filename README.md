@@ -14,6 +14,13 @@ I can use this script as a template for all my automation test script in Java.
 Update the "groupId" and the "artifactId" in "pom.xml" file, as incorrect value for those XML elements will lead to failure.
 
 Click [here](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) to find more about POM.
+
+### Important update notes on 2020/09/17
+Another major drawback of this design is that I need to manually update the webdriver file whenever my browser is updated to a new version.
+
+It seems the demo website "https://alphav3.vaultintel.com/" I test is no longer valid. I need to implement my work to another demo website.
+
+
 ## Other useful sites
 - Click [here](https://junit.org/junit5/docs/current/user-guide/) to find more about JUnit 5
 - Click [here](https://www.maketecheasier.com/vim-keyboard-shortcuts-cheatsheet/) to find more about Vim Keyboard Shortcuts Cheatsheet
