@@ -13,6 +13,9 @@ I can use this script as a template for all my automation test script in Java.
 ### Important update notes on 2019/08/16
 Update the "groupId" and the "artifactId" in "pom.xml" file, as incorrect value for those XML elements will lead to failure.
 
+### Important notification on 2020/09/16
+Please notice that this project, "DemoWorkShopTestScript" and "JUnit-Cucumber-Demo" can only run in windows, as I use a webdriver that is only compatible with windows.
+
 Click [here](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) to find more about POM.
 
 ### Important update notes on 2020/09/17
