@@ -14,8 +14,8 @@ public class HomePage {
     private WebDriverWait wait;
 
     // Web elements
-    @FindBy(css = "#left-panel > span > i")
-    WebElement expandArrow;
+    @FindBy(css="a[class='account']")
+    WebElement userEmailLogInLink;
 
     // constructor
     public HomePage(WebDriver driver)
@@ -28,7 +28,7 @@ public class HomePage {
     // page object methods
     public void WaitUntilHomePageLoadingComplete()
     {
-        wait.until(ExpectedConditions.elementToBeClickable(expandArrow));
+        wait.until(ExpectedConditions.elementToBeClickable(userEmailLogInLink));
     }
 
     public void LogOutFromHomePage() {

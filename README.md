@@ -21,8 +21,8 @@ One major drawback of this design is that it can only run in windows, as I use a
 ### Important update notes on 2020/09/17
 Another major drawback of this design is that I need to manually update the webdriver file whenever my browser is updated to a new version.
 
-It seems the demo website "https://alphav3.vaultintel.com/" I test is no longer valid. I need to implement my work to another demo website.
-
+### Important update notes on 2020/09/18
+Important TODO: the use of "this" seems to be wrong in my "HomePage.java" and "LoginPage.java". I need to fix it when I have time.
 
 ## Other useful sites
 - Click [here](https://junit.org/junit5/docs/current/user-guide/) to find more about JUnit 5

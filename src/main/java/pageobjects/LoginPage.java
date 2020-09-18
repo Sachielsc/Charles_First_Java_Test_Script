@@ -12,14 +12,14 @@ public class LoginPage {
     // definitions
     private WebDriver driver;
     private WebDriverWait wait;
-    private static String LoginPageURL = "https://alphav3.vaultintel.com/index/hostLogin";
+    private static String LoginPageURL = "http://demowebshop.tricentis.com/login";
 
     // Web elements
-    @FindBy(id = "user")
-    WebElement userNameField;
-    @FindBy(css = "input#password")
+    @FindBy(id = "Email")
+    WebElement emailField;
+    @FindBy(id = "Password")
     WebElement passWordField;
-    @FindBy(css = "button#login-submit")
+    @FindBy(css="input[value='Log in']")
     WebElement loginButton;
 
     // constructor
@@ -38,16 +38,16 @@ public class LoginPage {
 
     public HomePage LoginWithCredentials(String username, String password)
     {
-        TypeUserName(username);
+        TypeUserEmail(username);
         TypePassword(password);
         clickLoginButton();
         return new HomePage(driver);
     }
 
-    public void TypeUserName(String text)
+    public void TypeUserEmail(String text)
     {
-        wait.until(ExpectedConditions.elementToBeClickable(userNameField));
-        userNameField.sendKeys(text);
+        wait.until(ExpectedConditions.elementToBeClickable(emailField));
+        emailField.sendKeys(text);
     }
 
     public void TypePassword(String text)

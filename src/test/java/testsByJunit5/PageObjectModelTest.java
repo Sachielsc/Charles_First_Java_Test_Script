@@ -28,13 +28,13 @@ public class PageObjectModelTest {
     @DisplayName("Test the java method \"runTestCase1\"")
     public void runTestCase1() {
         // variable definitions
-        String userName = "plan.6";
-        String passWord = "plan01#";
+        String userEmail = "newzealand1126@gmail.com";
+        String userPassWord = "7fMT3C@w4vY2yMn";
 
         // test steps
         LoginPage loginPage = new LoginPage(driver);
         loginPage.NavigateToLoginPage();
-        HomePage homePage = loginPage.LoginWithCredentials(userName, passWord);
+        HomePage homePage = loginPage.LoginWithCredentials(userEmail, userPassWord);
         homePage.WaitUntilHomePageLoadingComplete();
     }
 
